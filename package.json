@@ -1,12 +1,12 @@
 {
-  "name": "crafty-auto",
+  "name": "autonomous-squid",
   "version": "0.1.0",
-  "description": "A autoupdating craftyjs server for development",
+  "description": "A autoupdating flying-squid server for development or production",
   "main": "app.js",
   "scripts": {
     "test": "test"
   },
-  "author": "mhsjlw",
+  "author": "mhsjlw <mhsjlw@aol.com>",
   "license": "MIT",
   "dependencies": {
     "hookshot": "~0.1.0",
