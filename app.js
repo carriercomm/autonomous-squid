@@ -11,7 +11,7 @@ if (!shell.which('git')) {
 }
 
 if(config.run == false) {
-  shell.exec("git clone https://github.com/mhsjlw/craftyjs.git server && cd server && npm install");
+  shell.exec("git clone https://github.com/mhsjlw/flying-squid.git server && cd server && npm install");
   config.run = true;
 }
 
