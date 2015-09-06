@@ -1,6 +1,11 @@
+# ignore node.js stuff
 node_modules
 server
 
+# ignore the log files
+*.log
+
+# ignore home files
 .cache/*
 .npm/*
 .bashrc_history
