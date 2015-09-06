@@ -12,15 +12,16 @@ if (!shell.which('git')) {
 
 if(config.run == false) {
   shell.exec("git clone https://github.com/mhsjlw/flying-squid.git server && cd server && npm install");
-  config.run = true;
+  config["run"] = true;
 }
 
 // make sure everything is up to date!
 console.log("Updating...");
-if(shell.exec('git pull && npm install && cd server && git pull && npm install && cd ..', { silent: false }).output != 0) {
-  console.log("Wha!? Something went wrong... create an issue on GitHub with the output.");
-  shell.exit(1);
-}
+//if(
+shell.exec('git pull && npm install && cd server && git pull && npm install && cd ..', { silent: false }) //) {
+  //console.log("Wha!? Something went wrong... create an issue on GitHub with the output.");
+  //shell.exit(1);
+//}
 
 var server = shell.exec('node server/app.js', function(code, output) {
   console.log('Server exit, code:', code);
