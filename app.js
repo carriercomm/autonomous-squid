@@ -22,9 +22,16 @@ if(shell.exec('git pull && npm install && cd server && git pull && npm install &
   shell.exit(1);
 }
 
-var server = shell.exec('node server/app.js', { async: true, silent: true });
-server.stdout.on('data', function(data) {
-  console.log(data);
+var server = shell.exec('node server/app.js', function(code, output) {
+  console.log('Server exit, code:', code);
+  if(code != 0){
+    console.log("Server state is errored, restarting...");
+    var restarter = shell.exec('node app.js', { async: true, silent: true });
+    restarter.stdout.on('data', function(data) {
+      console.log(data);
+    });
+    shell.exit(0);
+  }
 });
 
 hookshot('refs/heads/master', function(info) {
