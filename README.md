@@ -17,3 +17,4 @@ To run the server
 ## Thanks
 
  - Thanks to [coreh](https://github.com/Coreh) for making [hookshot](https://github.com/Coreh/hookshot) that is used in this project
+ - Thanks to [Creeplays](https://github.com/creeplays) for helping out with restarting and the package update
